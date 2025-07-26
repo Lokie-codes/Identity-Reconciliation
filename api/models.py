@@ -6,9 +6,16 @@ class Contact(models.Model):
     phoneNumber = models.CharField(max_length=15, blank=True, null=True)
     email = models.EmailField(max_length=254, blank=True, null=True)
     linkedId = models.IntegerField(null=True, blank=True)
-    linkPrecedence = models.TextChoices(
-        'secondary', 
-        'primary')
+
+    class LinkPrecedence(models.TextChoices):
+        PRIMARY = 'primary', 'Primary'
+        SECONDARY = 'secondary', 'Secondary'
+
+    linkPrecedence = models.CharField(
+        max_length=10,
+        choices=LinkPrecedence.choices,
+        default=LinkPrecedence.PRIMARY
+    )
     createdAt = models.DateTimeField(auto_now_add=True)
     updatedAt = models.DateTimeField(auto_now=True)
     deletedAt = models.DateTimeField(null=True, blank=True)

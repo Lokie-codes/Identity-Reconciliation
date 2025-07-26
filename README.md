@@ -116,5 +116,18 @@ First lets activate the virtual environment and install the required packages.
 python -m venv venv
 # source venv/bin/activate  # for macOS/Linux
 `venv\Scripts\activate` # for windows
+```
+Now once the virtual environment is activated, we can install the required packages using pip.
+```bash
 pip install -r requirements.txt
+```
+
+Lets now migrate the database to create the required tables.
+```bash
+python manage.py migrate
+```
+
+Now run the server to test the endpoint.
+```bash
+python manage.py runserver
 ```

@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .serializers import RequestSerializer, ResponseSerializer
+from .models import Contact
 
-# Create your views here.
+@api_view(['POST'])
+def reconcile_identity(request):
+    pass
