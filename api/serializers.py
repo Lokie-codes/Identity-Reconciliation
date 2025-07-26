@@ -13,15 +13,15 @@ class ContactSerializer(serializers.Serializer):
     primaryContactId = serializers.IntegerField(required=False, allow_null=True)
     emails = serializers.ListField(
         child=serializers.EmailField(),
-        required=False, allow_empty=True
+        required=False, allow_empty=True, allow_null=True
     )
     phoneNumbers = serializers.ListField(
         child=serializers.CharField(max_length=15),
-        required=False, allow_empty=True
+        required=False, allow_empty=True, allow_null=True
     )
     secondaryContactIds = serializers.ListField(
         child=serializers.IntegerField(),
-        required=False, allow_empty=True
+        required=False, allow_empty=True, allow_null=True
     )
 
     def validate(self, data):
