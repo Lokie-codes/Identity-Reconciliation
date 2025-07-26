@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['identity-reconciliation-dm7b.onrender.com']
 
+APPEND_SLASH = False
 
 # Application definition
 
