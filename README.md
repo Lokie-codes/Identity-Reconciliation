@@ -132,3 +132,12 @@ Now run the server to test the endpoint.
 python manage.py runserver
 ```
 
+Test the endpoint using curl or any API testing tool like Postman.
+```bash
+curl --location 'http://localhost:8000:/identify/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	"email": "yousuck@hillvalley.edu",
+	"phoneNumber": "123456"
+}'
+```
