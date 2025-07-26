@@ -110,3 +110,11 @@ New state of database:
 this should be sufficient to get started with the implementation of the /identify endpoint.
 I would proceed with Django Rest Framework to implement this endpoint as Python is easy to work with and the framework also provides an SQLite database for quick prototyping as they've asked for a SQL database to work with.
 
+Installation:
+First lets activate the virtual environment and install the required packages.
+```bash
+python -m venv venv
+# source venv/bin/activate  # for macOS/Linux
+`venv\Scripts\activate` # for windows
+pip install -r requirements.txt
+```
